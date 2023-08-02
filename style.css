@@ -16,7 +16,7 @@ body {
     font-family: sans-serif;
 }
 .container {
-    max-width: 90%;
+    max-width:1280px;
 }
 .login__form {
     display: flex;
@@ -24,6 +24,7 @@ body {
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
+    min-height: 80vh;
 }
 .login__form__img img {
     width: 100%;
@@ -44,6 +45,12 @@ body {
     border:2px solid #cdd9ea;
     padding: 0.6rem;
     border-radius: 5px;
+    outline:none;
+}
+
+.login__form__right form input:focus {
+    border: 2px solid rgb(40, 79, 158);
+    box-shadow: 0 0 0px rgb(10, 30, 71);
 }
 .login__form__right form label{
 color: #989b9f;
@@ -52,5 +59,34 @@ font-size: 0.8rem;
 .login__form__right form button {
     width: 100%; 
     margin-top: 1rem;
-    background-color: rgb(62, 125, 251);
+    background-color: rgb(4, 22, 58);
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 0.7rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.login__form__right form button:hover {
+    background-color: rgb(4, 22, 58);
+}
+
+@media screen and (min-width:768px) {
+    .login__form {
+        display: flex;
+       flex-direction: row;
+        background-color: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+}
+.login__form__img {
+ flex: 1;
+}
+.login__form__img img {
+   
+    height: 90vh;
+    width: 100%;
+    display: block;
+}
 }
